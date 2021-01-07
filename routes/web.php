@@ -25,3 +25,5 @@ Route::get('/schedules', [App\Http\Controllers\ScheduleController::class, 'index
 
 Route::get('/schedules/create', [App\Http\Controllers\ScheduleController::class, 'showCreateForm'])->name('schedules.create');
 Route::post('/schedules/create', [App\Http\Controllers\ScheduleController::class, 'create']);
+
+Route::get('/schedules/{schedule}/tasks', [App\Http\Controllers\TaskController::class, 'index'])->name('tasks.index');
