@@ -26,7 +26,7 @@ Route::get('/schedules', [App\Http\Controllers\ScheduleController::class, 'index
 Route::get('/schedules/create', [App\Http\Controllers\ScheduleController::class, 'showCreateForm'])->name('schedules.create');
 Route::post('/schedules/create', [App\Http\Controllers\ScheduleController::class, 'create']);
 
-Route::get('/schedules/{schedule}/tasks', [App\Http\Controllers\TaskController::class, 'index'])->name('tasks.index');
+Route::get('/schedules/{scheduleId}/tasks', [App\Http\Controllers\TaskController::class, 'index'])->name('tasks.index');
 
-Route::get('/schedules/{schedule}/tasks/edit', [App\Http\Controllers\TaskController::class, 'showEditForm'])->name('tasks.create');
-Route::post('/schedules/{schedule}/tasks/edit', [App\Http\Controllers\TaskController::class, 'edit']);
+Route::get('/schedules/{scheduleId}/tasks/edit', [App\Http\Controllers\TaskController::class, 'showEditForm'])->name('tasks.create');
+Route::post('/schedules/{scheduleId}/tasks/edit', [App\Http\Controllers\TaskController::class, 'edit']);
