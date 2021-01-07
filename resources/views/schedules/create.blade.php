@@ -7,3 +7,5 @@
 <input type="date" name="date" id="date">
 <button type="submit">新規作成</button>
 </form>
+
+<a href="{{route('schedules.index')}}">戻る</a>
